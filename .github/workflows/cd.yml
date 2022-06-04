@@ -16,14 +16,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Deploy using ssh
-      uses: appleboy/ssh-action@main
+      
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.PRIVATE_KEY }}
         port: 22
         script: |
-          cd ~/home/danielwetan/apps/node1
+          cd ~/home/sabri/Téléchargements/backMiseNer/backMise/index.js
           git pull origin main
           git status
           npm install --only=prod
